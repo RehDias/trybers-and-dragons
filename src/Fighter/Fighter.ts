@@ -4,6 +4,7 @@ import {
   ReceiveDamage,
   Levelup,
 } from './InterfacesFight';
+import SimpleFighter from './SimpleFighter';
 
 export default interface Fighter extends
   LifeAndStrength,
@@ -11,6 +12,6 @@ export default interface Fighter extends
   Levelup {
   defense: number
   energy?: Energy
-  attack(enemy: Fighter): void
+  attack(enemy: Fighter | SimpleFighter): void
   special(enemy?: Fighter): void | undefined
 }
