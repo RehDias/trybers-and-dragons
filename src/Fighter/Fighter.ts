@@ -13,5 +13,5 @@ export default interface Fighter extends
   defense: number
   energy?: Energy
   attack(enemy: Fighter | SimpleFighter): void
-  special(enemy?: Fighter): void | undefined
+  special(enemy?: Fighter | SimpleFighter): void | undefined
 }
